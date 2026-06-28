@@ -9,6 +9,8 @@ Ein leichtgewichtiges, lokales Speedtest-Frontend in reinem HTML, CSS und JavaSc
 - Responsive Layout für Desktop und mobile Ansichten
 - Kein Backend erforderlich — verwendet lokale Pfade für Testdaten
 
+<img width="1120" height="437" alt="grafik" src="https://github.com/user-attachments/assets/64ab7e57-764f-47f7-ba66-39964615bdf3" />
+
 **Schnellstart**
 
 - Einfachste Variante: Öffne die Datei `index.html` im Browser.
