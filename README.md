@@ -52,7 +52,7 @@ Hinweis: Für reproduzierbare Messungen betreibe das Projekt auf einem lokalen H
 - Fehler, Feature‑Wünsche oder Design‑Änderungen bitte als Issues oder PRs im Repository einreichen.
 
 **Lizenz**
-- MIT — siehe `LICENSE` (falls gewünscht, kann ich eine LICENSE-Datei hinzufügen).
+- MIT — siehe `LICENSE`.
 
 **Credits**
 - Farbpalette / Stil von Catppuccin-inspirierten Farben übernommen und angepasst.
