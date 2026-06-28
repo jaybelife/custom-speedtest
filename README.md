@@ -29,7 +29,7 @@ Ein leichtgewichtiges, lokales Speedtest-Frontend in reinem HTML, CSS und JavaSc
 - `index.html` — Hauptseite und Markup
 - `assets/css/style.css` — Styling, Farbvariablen (Catppuccin‑Palette)
 - `assets/js/script.js` — Testlogik, UI‑State und Messungen
-- `downloading/` und `upload` — lokale Pfade, die als Ziel der Messungen dienen (im Projekt definiert)
+- `downloading/` und `upload` müssen in meinem Discord bezogen werden -> https://jaybelife.de/community da sie für GitHub zu groß sind.
 
 **Entwicklung & Tests**
 
