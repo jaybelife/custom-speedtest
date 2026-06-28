@@ -59,4 +59,5 @@ Hinweis: Für reproduzierbare Messungen betreibe das Projekt auf einem lokalen H
 **Credits**
 - Farbpalette / Stil von Catppuccin-inspirierten Farben übernommen und angepasst.
 
-Viel Erfolg — sag Bescheid, wenn ich noch ein kurzes Beispiel zur Einbindung in ein statisches Hosting oder ein Docker‑Setup hinzufügen soll.
+Viel Erfolg!
+Jay
