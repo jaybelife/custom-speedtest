@@ -1,0 +1,369 @@
+:root {
+    --base: #24273a;
+    --mantle: #1e2030;
+    --crust: #181926;
+    --surface: #363a4f;
+    --text: #cad3f5;
+    --green: #a6da95;
+    --red: #ed8796;
+    --yellow: #eed49f;
+    --subtext: #a5adcb;
+    --muted: var(--subtext);
+    --mauve: #c6a0f6;
+    --pink: #f5bde6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--base);
+    user-select: none;
+}
+
+.site-shell {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.topbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    padding-bottom: 1rem;
+}
+
+.logo img {
+    height: 56px;
+    display: block;
+}
+
+.topbar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    background: var(--mauve);
+    color: var(--crust);
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.topbar-button:hover {
+    background: var(--pink);
+}
+
+button {
+    font: inherit
+}
+
+.speedtest-shell {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 220px);
+}
+
+.speedtest-grid {
+    display: grid;
+    grid-template-columns: minmax(320px, 360px) 1fr;
+    gap: 1.5rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.metric-card,
+.status-panel {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 18px;
+}
+
+.metric-card {
+    display: grid;
+    gap: .8rem;
+    padding: 1.5rem;
+    min-height: 130px;
+}
+
+.metric-label,
+.ring-title,
+.metric-value small {
+    color: var(--muted);
+}
+
+.metric-label,
+.ring-title {
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.ring-title {
+    font-size: .95rem;
+}
+
+.metric-value {
+    display: grid;
+    gap: .35rem;
+    align-items: start;
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    font-weight: 700;
+}
+
+.metric-value small {
+    font-size: .75rem;
+}
+
+.status-panel {
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 360px;
+}
+
+.status-ring {
+    width: min(100%, 320px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    position: relative;
+    background: var(--base);
+    border: 1px solid rgba(255,255,255,.08);
+    overflow: hidden;
+}
+
+.status-ring::after {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    border-top-color: rgba(198, 160, 246, 0.7);
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.status-ring.status-ring--spinning::after {
+    opacity: 1;
+    animation: spin 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.status-ring-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    gap: .6rem;
+}
+
+.ring-value {
+    display: grid;
+    place-items: center;
+    gap: .2rem;
+    color: var(--text);
+}
+
+.ring-value-number {
+    font-size: clamp(2.5rem, 4vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.ring-value-unit {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--muted);
+}
+
+.ring-value--compact .ring-value-number {
+    font-size: clamp(1.8rem, 3vw, 3.5rem);
+}
+
+.ring-value--small .ring-value-number {
+    font-size: clamp(1.4rem, 2.2vw, 2.4rem);
+}
+
+.action-button {
+    width: min(100%, 260px);
+    padding: 1rem 1.4rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--crust);
+    background: var(--mauve);
+    transition: all .2s ease-in-out;
+}
+
+.action-button:hover {
+    background: var(--pink);
+}
+
+.status-caption {
+    max-width: 320px;
+    text-align: center;
+    font-size: .95rem;
+}
+
+.footer {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    color: var(--muted);
+}
+
+.footer-title {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.footer-title a,
+.footer-text a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.footer-title a:hover,
+.footer-text a:hover {
+    color: var(--pink);
+}
+
+@media (max-width:960px) {
+    .speedtest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+
+    .status-panel {
+        width: 100%;
+        max-width: none;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width:720px) {
+    body {
+        padding: 1rem;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .topbar-button {
+        width: 100%;
+    }
+
+    .speedtest-shell {
+        width: 100%;
+    }
+
+    .speedtest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .metric-card,
+    .status-panel {
+        border-radius: 20px;
+    }
+
+    .metric-card {
+        padding: 1.2rem;
+        min-height: 120px;
+    }
+
+    .status-panel {
+        padding: 1.2rem;
+    }
+
+    .status-ring {
+        width: min(100%, 260px);
+    }
+
+    .ring-value-number {
+        font-size: clamp(2rem, 4vw, 4.5rem);
+    }
+
+    .ring-value-unit {
+        font-size: 0.85rem;
+    }
+
+    .action-button {
+        width: 100%;
+    }
+}
+
+@media (max-width:520px) {
+    .metric-card {
+        padding: 1rem;
+    }
+
+    .metric-label,
+    .ring-title {
+        font-size: 0.75rem;
+    }
+
+    .metric-value {
+        font-size: clamp(1.6rem, 5vw, 2.5rem);
+    }
+
+    .action-button {
+        padding: 0.9rem 1rem;
+    }
+
+    .status-ring {
+        width: min(100%, 220px);
+    }
+}

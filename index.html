@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Title -->
+    <title>Speedtest by J4YY.NETZWERK</title>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c6a0f6">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://jaybelife.de/assets/images/pfp.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://jaybelife.de/assets/images/pfp.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://jaybelife.de/assets/images/pfp.png">
+    <link rel="icon" href="https://jaybelife.de/assets/images/pfp.png" type="image/png">
+
+    <!-- Stylesheets -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Speedtest by J4YY.NETZWERK">
+    <meta property="og:description" content="Teste deine Internetgeschwindigkeit mit unserem kostenlosen Speedtest.">
+    <meta property="og:image" content="https://jaybelife.de/assets/images/pfp.png">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Powered by J4YY.DE">
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Speedtest by J4YY.NETZWERK">
+    <meta name="twitter:description" content="Teste deine Internetgeschwindigkeit mit unserem kostenlosen Speedtest.">
+    <meta name="twitter:image" content="https://jaybelife.de/assets/images/pfp.png">
+    <meta name="twitter:site" content="@jaybelife">
+    <meta name="twitter:creator" content="@jaybelife">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="site-shell">
+        <header class="topbar">
+            <a class="logo" href="https://wirhabendeinedomain.de" target="_blank" rel="noopener noreferrer">
+                <img src="https://wirhabendeinedomain.de/assets/img/whdd-logo.png" alt="Wir haben deine Domain" />
+            </a>
+        </header>
+
+        <div class="speedtest-shell">
+            <div class="speedtest-grid">
+
+                <div class="status-panel">
+                    <div class="status-ring">
+                        <div class="status-ring-inner">
+                            <span class="ring-title" id="statusTitle">
+                                <i class="fa-solid fa-gauge-high"></i>
+                                READY
+                            </span>
+                            <div class="ring-value ring-value--small" id="ringValue">
+                                <span class="ring-value-number">LOS</span>
+                                <small class="ring-value-unit"></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="startButton" class="action-button">
+                        <i class="fa-solid fa-play"></i>
+                        START
+                    </button>
+                </div>
+
+                <div class="cards-grid">
+
+                    <div class="metric-card">
+                        <span class="metric-label">
+                            <i class="fa-solid fa-tower-cell"></i>
+                            PING
+                        </span>
+                        <div class="metric-value">
+                            <small>ms</small>
+                            <span id="pingValue">--</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <span class="metric-label">
+                            <i class="fa-solid fa-download"></i>
+                            DOWNLOAD
+                        </span>
+                        <div class="metric-value">
+                            <small>Mbps</small>
+                            <span id="downloadValue">--</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <span class="metric-label">
+                            <i class="fa-solid fa-wave-square"></i>
+                            JITTER
+                        </span>
+                        <div class="metric-value">
+                            <small>ms</small>
+                            <span id="jitterValue">--</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <span class="metric-label">
+                            <i class="fa-solid fa-upload"></i>
+                            UPLOAD
+                        </span>
+                        <div class="metric-value">
+                            <small>Mbps</small>
+                            <span id="uploadValue">--</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-title">
+                    Made by <a href="https://jaybelife.de" target="_blank" rel="noopener noreferrer">.jaybelife</a> with
+                    <i class="fas fa-heart"></i>
+                </div>
+
+                <div class="footer-text">
+                    <a href="https://github.com/jaybelife" target="_blank" rel="noopener noreferrer">Open Source</a> for
+                    You!
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
